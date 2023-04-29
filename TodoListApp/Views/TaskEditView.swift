@@ -13,6 +13,11 @@ struct TaskEditView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @EnvironmentObject var dateHolder: DateHolder
     
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \TaskItem.counter, ascending: true)],
+        animation: .default)
+    private var items: FetchedResults<TaskItem>
+    
     @State var selectedTaskItem: TaskItem?
     @State var name: String
     @State var desc: String
@@ -57,8 +62,7 @@ struct TaskEditView: View {
                     .foregroundColor(.green)
                 }
             }
-            
-        }
+        }.navigationTitle("Create new task")
     }
     
     func displayComps() -> DatePickerComponents {
@@ -70,8 +74,10 @@ struct TaskEditView: View {
             if selectedTaskItem == nil {
                 selectedTaskItem = TaskItem(context: viewContext)
             }
+            selectedTaskItem?.counter = (items.last?.counter ?? 0)+1
             selectedTaskItem?.created = Date()
             selectedTaskItem?.name = name
+            selectedTaskItem?.desc = desc
             selectedTaskItem?.dueDate = dueDate
             selectedTaskItem?.scheduleTime = scheduleTime
             
@@ -82,8 +88,8 @@ struct TaskEditView: View {
     
 }
 
-struct TaskEditView_Previews: PreviewProvider {
-    static var previews: some View {
-        TaskEditView(passedTaskItem: TaskItem(), initialDate: Date())
-    }
-}
+//struct TaskEditView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TaskEditView(passedTaskItem: TaskItem(), initialDate: Date())
+//    }
+//}

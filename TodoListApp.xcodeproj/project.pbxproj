@@ -26,6 +26,7 @@
 		370736E129FBD13A009B9514 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = SOURCE_ROOT; };
 		370736E329FBDB2F009B9514 /* CheckBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxView.swift; sourceTree = "<group>"; };
 		370736E629FC3C32009B9514 /* TaskItemExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItemExtension.swift; sourceTree = "<group>"; };
+		370736E829FD8912009B9514 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		37BD9DB729F9B672008803A3 /* TodoListApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoListApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37BD9DBA29F9B672008803A3 /* TodoListAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListAppApp.swift; sourceTree = "<group>"; };
 		37BD9DBC29F9B672008803A3 /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
@@ -61,6 +62,7 @@
 		37BD9DAE29F9B672008803A3 = {
 			isa = PBXGroup;
 			children = (
+				370736E829FD8912009B9514 /* readme.md */,
 				37BD9DB929F9B672008803A3 /* TodoListApp */,
 				37BD9DB829F9B672008803A3 /* Products */,
 			);

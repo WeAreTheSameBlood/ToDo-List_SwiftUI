@@ -22,18 +22,19 @@ struct CheckBoxView: View {
                          : .secondary)
         .onTapGesture {
             withAnimation {
-                if !passedTaskItem.isCompleted() {
-                    passedTaskItem.completedDate = Date()
-                    dateHolder.saveContext(viewContext)
-                }
+                passedTaskItem.completedDate = passedTaskItem.isCompleted() ? nil : Date()
+                passedTaskItem.counter = passedTaskItem.isCompleted() ? +100 : -100
+                dateHolder.saveContext(viewContext)
             }
         }
-        
     }
 }
 
-struct CheckBoxView_Previews: PreviewProvider {
-    static var previews: some View {
-        CheckBoxView(passedTaskItem: TaskItem())
-    }
-}
+//struct CheckBoxView_Previews: PreviewProvider {
+//    @Environment(\.managedObjectContext) private var viewContext
+//    @EnvironmentObject var dateHolder: DateHolder
+//    @ObservedObject var passedTaskItem: TaskItem
+//    static var previews: some View {
+//        CheckBoxView(passedTaskItem: TaskItem())
+//    }
+//}

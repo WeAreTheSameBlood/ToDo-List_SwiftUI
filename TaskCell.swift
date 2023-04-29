@@ -22,8 +22,8 @@ struct TaskCell: View {
     }
 }
 
-struct TaskCell_Previews: PreviewProvider {
-    static var previews: some View {
-        TaskCell(passedTaskItem: TaskItem())
-    }
-}
+//struct TaskCell_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TaskCell(passedTaskItem: TaskItem())
+//    }
+//}

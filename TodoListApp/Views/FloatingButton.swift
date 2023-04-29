@@ -13,7 +13,6 @@ struct FloatingButton: View {
     
     var body: some View
     {
-        Spacer()
         HStack {
             NavigationLink(destination: TaskEditView(passedTaskItem: nil, initialDate: Date())
                 .environmentObject(dateHolder)) {
@@ -30,8 +29,8 @@ struct FloatingButton: View {
     }
 }
 
-struct FloatingButton_Previews: PreviewProvider {
-    static var previews: some View {
-        FloatingButton()
-    }
-}
+//struct FloatingButton_Previews: PreviewProvider {
+//    static var previews: some View {
+//        FloatingButton()
+//    }
+//}
